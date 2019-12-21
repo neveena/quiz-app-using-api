@@ -1,9 +1,10 @@
 import axios from 'axios';
 
 export default {
-    getQuizQuestions({ commit }) {
-        axios.get('https://opentdb.com/api.php?amount=5&category=11&type=multiple').then(response => {
-            let questions = response.data.results.map((data, index) => {
+    async getQuizQuestions({commit}) {
+        try {
+            let res = await axios.get('https://opentdb.com/api.php?amount=5&category=11&type=multiple');
+            let questions = res.data.results.map((data, index) => {
                 return {
                     index: index,
                     question: data.question,
@@ -15,8 +16,15 @@ export default {
                     ],
                     answer: data.correct_answer,
                 };
-            })
+            });
+
             commit('setQuestions', questions);
-        });
+          
+        } catch (err) {
+            if (!err.status) {
+                return 'Network error';
+            } 
+            return err;
+        }
     }
 }

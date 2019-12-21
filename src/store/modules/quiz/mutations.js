@@ -10,4 +10,8 @@ export default {
     updateTotalCurrentAnswers(state) {
         state.totalCorrectAnswers = state.totalCorrectAnswers + 1;
     },
+
+    updateSelectedAnswer(state, data) {
+        state.selectedAnswers.push(data);
+    }
 }
