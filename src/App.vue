@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <h1>Movie quiz app using API</h1>
+        <h1>Quiz app using API</h1>
         <div class="container">
             <Quiz v-if="status.start" />
             <div v-else>

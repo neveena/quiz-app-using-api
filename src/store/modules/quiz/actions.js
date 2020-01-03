@@ -3,7 +3,7 @@ import axios from 'axios';
 export default {
     async getQuizQuestions({commit}) {
         try {
-            let res = await axios.get('https://opentdb.com/api.php?amount=5&category=11&type=multiple');
+            let res = await axios.get('https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple');
             let questions = res.data.results.map((data, index) => {
                 return {
                     index: index,

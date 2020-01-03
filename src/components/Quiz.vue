@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-if="quiz.currentQuestionIndex < 5">
+        <div v-if="quiz.currentQuestionIndex < 10">
             <question  
                 :question="question" 
                 @selectedAnswer="selectedAnswer"

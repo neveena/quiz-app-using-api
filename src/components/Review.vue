@@ -18,10 +18,6 @@
                 <span v-html="option" />
             </label>
             <div class="answer">
-                <!-- <p>
-                    <strong>Your answer: </strong>
-                    {{ quiz.selectedAnswers[question.index].selectedAnswer }}
-                </p> -->
                 <p>
                     <strong>Correct answer: </strong>
                     {{ question.answer }}

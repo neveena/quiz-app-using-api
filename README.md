@@ -1,4 +1,4 @@
-# Movie quiz app using API
+# Quiz app using API
 
 ## Project setup
 ```
